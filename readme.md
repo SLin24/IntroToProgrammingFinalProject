@@ -4,7 +4,8 @@
 
 ## Description
 
-
+Program to solve a maze
+Program to solve minesweeper
 
 ## Getting Started
 
