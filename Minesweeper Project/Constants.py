@@ -14,6 +14,7 @@ c.add_argument("--start-maximized")
 c.add_experimental_option("excludeSwitches", ["enable-automation"])
 c.add_experimental_option('useAutomationExtension', False)
 
+# getting path to chromedriver.exe
 parPath = os.path.dirname(os.path.dirname(__file__))
 relPath = '\chromedriver.exe'
 fullPath = parPath + relPath
@@ -29,17 +30,20 @@ action = ActionChains(driver)
 
 
 faceId = driver.find_element("id", "face")
+# gets the length and width of the grid for different modes
 getX = {1: 9, 2: 16, 3: 30}
 getY = {1: 9, 2: 16, 3: 16}
 
+# gets the different directions for the floodfill algorithms
 dX = [-1, 1, 0, 0]
 dY = [0, 0, -1, 1]
 
 x = getX.get(mode)
 y = getY.get(mode)
 
-midX = int(x//8)
-midY = int(y//4)
+# starting click location
+midX = int(x//2)
+midY = int(y//2)
 
 numCnt = 26
 border = 9
