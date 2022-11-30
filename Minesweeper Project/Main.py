@@ -10,6 +10,7 @@ from Constants import *
 from Util import *
 
 
+# clicks the defined start point until a size that is "good" deemed by constants
 start()
 periodicUpdate()
 while(getCnt() < minSquaresRequired):
@@ -20,15 +21,16 @@ while(getCnt() < minSquaresRequired):
 
 run = 0
 reachCnt = 0
-while (not check()):
+while (True):
     print(run)
     try:
+        # normal checks
         basicMineFlag()
         basicMineClick()
         change = periodicUpdate()
         if (not change):
+            # checks for special logic cases if normal checks are stuck
             reachCnt += 1
-            print("REACHED")
             updateNeighborGrid()
             solvePattern(oneTwoOnePattern, oneTwoOneClickPattern, oneTwoOneFlagPattern, oneTwoOneMines)
             solvePattern(oneTwoTwoOnePattern, oneTwoTwoOneClickPattern, oneTwoTwoOneFlagPattern, oneTwoTwoOneMines)
@@ -36,14 +38,14 @@ while (not check()):
             solvePattern(oneTwoPattern, oneTwoClickPattern, oneTwoFlagPattern, oneTwoMines)
             wait = periodicUpdate()
             if (not wait):
+                print("AWAITING USER INPUT")
                 while (not periodicUpdate()):
                     continue
             # if (not change):
             #     probabilityGuess()
     except:
-        print("FAILED EXCEPT")
+        # pauses for 100 seconds after winning or losing to inspect
         time.sleep(100)
-        print("FAILED")
         break
     run += 1
     # if (reachCnt >= 50):
