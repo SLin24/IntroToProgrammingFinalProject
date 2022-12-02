@@ -7,7 +7,6 @@
 * Program to solve a maze
 * Program to solve minesweeper
 
-## Getting Started
 
 ### Dependencies
 
@@ -15,19 +14,6 @@
 * Selenium
 * ChromeDriver (Latest)
 * Pandas
-
-### Installing
-
-* How/where to download your program
-* Any modifications needed to be made to files/folders
-
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
 ## Help
 
@@ -42,9 +28,6 @@ command to run if program contains helper info
 Samuel Lin
 <br>
 S.lin25@bcp.org
-
-## Version History
-
 
 
 ## License
