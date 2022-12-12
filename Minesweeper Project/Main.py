@@ -1,3 +1,4 @@
+# Samuel Lin
 # https://www.geeksforgeeks.org/get_attribute-element-method-selenium-python/
 # https://medium.com/analytics-vidhya/python-selenium-all-mouse-actions-using-actionchains-197530cf75df
 # https://www.geeksforgeeks.org/python-find_element_by_id-method-in-selenium/
